@@ -8,7 +8,7 @@ RUN pip install -r requirements.txt --no-cache-dir
 ADD . /code/
 
 # ssh
-ENV SSH_PASSWD "root:Docker!"
+ENV SSH_PASSWD "root:AaKobi!"
 RUN apt-get update \
         && apt-get install -y --no-install-recommends dialog \
         && apt-get update \
@@ -22,3 +22,5 @@ RUN chmod u+x /usr/local/bin/init.sh
 EXPOSE 8000 2222
 #CMD ["python", "/code/manage.py", "runserver", "0.0.0.0:8000"]
 ENTRYPOINT ["init.sh"]
+
+
